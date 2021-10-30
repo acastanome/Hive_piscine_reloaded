@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acastano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 13:07:38 by acastano          #+#    #+#             */
-/*   Updated: 2021/10/30 21:16:56 by acastano         ###   ########.fr       */
+/*   Created: 2021/10/30 22:40:34 by acastano          #+#    #+#             */
+/*   Updated: 2021/10/31 01:32:15 by acastano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+int	ft_iterative_factorial(int nb)
 {
-	char	c;
+	int	fact;
 
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
+	fact = 1;
+	if (nb < 0 || nb > 12)
+		return (0);
+	while (nb > 0)
+		fact = fact * nb--;
+	return (fact);
 }

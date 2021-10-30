@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acastano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 13:07:38 by acastano          #+#    #+#             */
-/*   Updated: 2021/10/30 21:16:56 by acastano         ###   ########.fr       */
+/*   Created: 2021/10/30 20:12:51 by acastano          #+#    #+#             */
+/*   Updated: 2021/10/30 20:33:30 by acastano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+void	ft_swap(int *a, int *b)
 {
-	char	c;
+	int	temp;
 
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
+	temp = *b;
+	*b = *a;
+	*a = temp;
 }
