@@ -1,16 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acastano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:29:07 by acastano          #+#    #+#             */
-/*   Updated: 2021/11/03 12:10:47 by acastano         ###   ########.fr       */
+/*   Created: 2021/11/03 17:06:34 by acastano          #+#    #+#             */
+/*   Updated: 2021/11/03 17:33:52 by acastano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(Value) Value >= 0 ? Value : -(Value)
-#endif
+void	ft_foreach(int *tab, int length, void(*f)(int))
+{
+	int	i;
+
+	i = 0;
+	while (i < length)
+	{
+		f(tab[i]);
+		i++;
+	}
+}

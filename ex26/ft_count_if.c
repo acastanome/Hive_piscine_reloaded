@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acastano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:29:07 by acastano          #+#    #+#             */
-/*   Updated: 2021/11/03 12:10:47 by acastano         ###   ########.fr       */
+/*   Created: 2021/11/03 17:36:03 by acastano          #+#    #+#             */
+/*   Updated: 2021/11/03 19:17:09 by acastano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(Value) Value >= 0 ? Value : -(Value)
-#endif
+int	ft_count_if(char **tab, int(*f)(char*))
+{
+	int	count;
+
+	count = 0;
+	while (*tab != '\0')
+	{
+		if (f(*tab) == 1)
+			count++;
+		tab++;
+	}
+	return (count);
+}
