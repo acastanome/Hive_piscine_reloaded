@@ -6,7 +6,7 @@
 /*   By: acastano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 19:20:48 by acastano          #+#    #+#             */
-/*   Updated: 2021/11/03 21:05:37 by acastano         ###   ########.fr       */
+/*   Updated: 2021/11/03 21:15:42 by acastano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_is_argc_valid(int argc)
 	}
 	if (argc > 2)
 	{
-		write(2, "Too many arguments.\n", 19);
+		write(2, "Too many arguments.\n", 20);
 		return (1);
 	}
 	return (0);
